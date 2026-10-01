@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="{{lang}}" dir="{{dir}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{meta_title}}</title>
+<meta name="description" content="{{meta_desc}}">
+<meta name="theme-color" content="#0F1E36">
+<link rel="canonical" href="{{canonical}}">
+<link rel="alternate" hreflang="en" href="{{url_en}}">
+<link rel="alternate" hreflang="ar" href="{{url_ar}}">
+<link rel="alternate" hreflang="x-default" href="{{url_en}}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{meta_title}}">
+<meta property="og:description" content="{{meta_desc}}">
+<meta property="og:url" content="{{canonical}}">
+<meta property="og:image" content="{{site_url}}/assets/og-image.jpg">
+<meta property="og:locale" content="{{og_locale}}">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="{{base}}assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="{{base}}assets/favicon-512.png">
+<link rel="apple-touch-icon" href="{{base}}assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="{{fonts_url}}" rel="stylesheet">
+<link rel="stylesheet" href="{{base}}assets/style.css">
+<script>document.documentElement.classList.add('js');</script>
+<script type="application/ld+json">{{jsonld}}</script>
+</head>
+<body>
+<a class="skip" href="#main">{{skip}}</a>
+
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a class="brand" href="{{home_href}}" aria-label="{{company}}">
+      <img src="{{base}}assets/logo-compact.webp" alt="{{logo_alt}}" width="760" height="448">
+    </a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#about">{{nav_about}}</a>
+      <a href="#services">{{nav_services}}</a>
+      <a href="#focus">{{nav_focus}}</a>
+      <a href="#process">{{nav_process}}</a>
+      <a href="#contact">{{nav_contact}}</a>
+    </nav>
+    <div class="header-actions">
+      <a class="lang-toggle" href="{{other_href}}" hreflang="{{other_lang_code}}" lang="{{other_lang_code}}">{{other_lang_label}}</a>
+      <a class="btn btn-small btn-gold" href="#contact">{{nav_cta}}</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="{{menu}}">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero">
+  <svg class="hero-orbit" viewBox="0 0 800 800" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="og" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#D8BA7D"/><stop offset="1" stop-color="#A27E42"/>
+      </linearGradient>
+    </defs>
+    <g fill="none" stroke="url(#og)" stroke-width="1.2">
+      <circle cx="400" cy="400" r="150" opacity=".35"/>
+      <circle cx="400" cy="400" r="240" opacity=".25"/>
+      <circle cx="400" cy="400" r="330" opacity=".16"/>
+      <ellipse cx="400" cy="400" rx="380" ry="120" transform="rotate(-18 400 400)" stroke-width="2" opacity=".55"/>
+      <ellipse cx="400" cy="400" rx="60" ry="240" opacity=".18"/>
+      <ellipse cx="400" cy="400" rx="150" ry="240" opacity=".14"/>
+      <path d="M160 400h480M220 280h360M220 520h360" opacity=".14"/>
+    </g>
+  </svg>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">{{hero_eyebrow}}</p>
+      <h1>{{hero_h1_a}} <span class="gold-text">{{hero_h1_b}}</span></h1>
+      <p class="lead">{{hero_lead}}</p>
+      <div class="hero-cta">
+        <a class="btn btn-navy" href="#contact">{{hero_cta1}} <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">{{i:arrow}}</svg></a>
+        <a class="btn btn-ghost" href="#services">{{hero_cta2}}</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="logo-card">
+        <img src="{{base}}assets/logo-full.webp" alt="{{logo_alt}}" width="760" height="531" fetchpriority="high">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<section class="trust" aria-label="Highlights">
+  <div class="container trust-grid">
+    {{@trust}}
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="container about-grid">
+    <div class="about-main reveal">
+      <p class="eyebrow">{{about_eyebrow}}</p>
+      <h2>{{about_title}}</h2>
+      <p class="body-lg">{{about_p1}}</p>
+      <div class="vm-grid">
+        <div class="vm-card">
+          <h3>{{vision_title}}</h3>
+          <p>{{vision}}</p>
+        </div>
+        <div class="vm-card">
+          <h3>{{mission_title}}</h3>
+          <p>{{mission}}</p>
+        </div>
+      </div>
+    </div>
+    <aside class="about-side reveal">
+      <div class="panel">
+        <h3>{{values_title}}</h3>
+        <ul class="check-list">{{@values}}</ul>
+      </div>
+      <div class="panel panel-quiet">
+        <h3>{{info_title}}</h3>
+        <dl class="info-list">{{@info}}</dl>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section section-alt" id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">{{services_eyebrow}}</p>
+      <h2>{{services_title}}</h2>
+      <p class="section-intro">{{services_intro}}</p>
+    </div>
+    <div class="card-grid">{{@services}}</div>
+    <div class="licensed reveal">
+      <span class="licensed-label">{{licensed_label}}</span>
+      <ul>{{@licensed}}</ul>
+    </div>
+  </div>
+</section>
+
+<!-- FOCUS -->
+<section class="section section-dark" id="focus">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow eyebrow-light">{{focus_eyebrow}}</p>
+      <h2>{{focus_title}}</h2>
+      <p class="section-intro">{{focus_intro}}</p>
+    </div>
+    <div class="focus-grid">{{@focus}}</div>
+  </div>
+</section>
+
+<!-- WHO WE SERVE -->
+<section class="section">
+  <div class="container serve-grid">
+    <div class="reveal">
+      <p class="eyebrow">{{serve_eyebrow}}</p>
+      <h2>{{serve_title}}</h2>
+      <p class="body-lg">{{serve_p}}</p>
+      <ul class="chips">{{@chips}}</ul>
+    </div>
+    <div class="scope-card reveal">
+      <svg viewBox="0 0 24 24" class="scope-icon" aria-hidden="true">{{i:globe}}</svg>
+      <h3>{{scope_title}}</h3>
+      <p>{{scope_p}}</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section section-alt" id="process">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">{{process_eyebrow}}</p>
+      <h2>{{process_title}}</h2>
+      <p class="section-intro">{{process_intro}}</p>
+    </div>
+    <ol class="steps">{{@steps}}</ol>
+    <div class="expect reveal">
+      <h3>{{expect_title}}</h3>
+      <ul>{{@expect}}</ul>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="container contact-grid">
+    <div class="reveal">
+      <p class="eyebrow">{{contact_eyebrow}}</p>
+      <h2>{{contact_title}}</h2>
+      <p class="body-lg">{{contact_p}}</p>
+      <ul class="contact-list">{{@contact_rows}}</ul>
+    </div>
+    <form class="contact-form reveal" id="contact-form" novalidate
+          data-endpoint="{{form_endpoint}}" data-email="{{email}}" data-phone="{{phone}}" data-lang="{{lang}}"
+          data-ejs-service="{{emailjs_service_id}}" data-ejs-template="{{emailjs_template_id}}" data-ejs-key="{{emailjs_public_key}}"
+          data-msg-required="{{f_required}}" data-msg-ok="{{f_ok}}" data-msg-err="{{f_err}}"
+          data-msg-mailto="{{f_mailto}}" data-msg-notready="{{f_notready_final}}" data-msg-sending="{{f_sending}}">
+      <div class="field-row">
+        <label class="field"><span>{{f_name}} *</span><input type="text" name="name" autocomplete="name" required></label>
+        <label class="field"><span>{{f_company}}</span><input type="text" name="company" autocomplete="organization"></label>
+      </div>
+      <div class="field-row">
+        <label class="field"><span>{{f_email}} *</span><input type="email" name="email" autocomplete="email" required dir="ltr"></label>
+        <label class="field"><span>{{f_phone}}</span><input type="tel" name="phone" autocomplete="tel" dir="ltr"></label>
+      </div>
+      <label class="field"><span>{{f_topic}}</span>
+        <select name="topic">{{@topics}}</select>
+      </label>
+      <label class="field"><span>{{f_message}} *</span><textarea name="message" rows="5" required></textarea></label>
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+      <button class="btn btn-navy btn-block" type="submit">{{f_send}}</button>
+      <p class="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo"><img src="{{base}}assets/logo-mark.webp" alt="B7 Global" width="560" height="247" loading="lazy"></div>
+      <p class="footer-company">{{company}}</p>
+      <p class="footer-tag">{{foot_tag}}</p>
+    </div>
+    <div>
+      <h4>{{foot_nav}}</h4>
+      <ul class="footer-links">
+        <li><a href="#about">{{nav_about}}</a></li>
+        <li><a href="#services">{{nav_services}}</a></li>
+        <li><a href="#focus">{{nav_focus}}</a></li>
+        <li><a href="#process">{{nav_process}}</a></li>
+        <li><a href="#contact">{{nav_contact}}</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>{{foot_contact}}</h4>
+      <ul class="footer-links">{{@footer_contact}}</ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>{{foot_disclaimer}}</p>
+    <p class="copy">© {{year}} {{company}} (S.P.S - L.L.C). {{foot_rights}}</p>
+  </div>
+</footer>
+
+<a class="to-top" href="#top" aria-label="{{to_top}}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>
+
+<script src="{{base}}assets/script.js" defer></script>
+</body>
+</html>

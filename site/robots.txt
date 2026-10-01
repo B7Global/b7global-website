@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://b7global.ae/sitemap.xml
