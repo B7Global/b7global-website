@@ -16,7 +16,10 @@
   --radius: 18px;
   --shadow: 0 24px 50px -28px rgba(15, 30, 54, 0.35);
   --header-h: 80px;
+  /* Brand is designed in light colours; stops phone browsers auto-darkening the page */
+  color-scheme: only light;
 }
+html { color-scheme: only light; }
 
 html[lang="en"] {
   --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
