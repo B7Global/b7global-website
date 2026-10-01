@@ -19,9 +19,9 @@ CONFIG = {
     #   2. form_endpoint (e.g. a Formspree URL)
     #   3. "email" above -> opens the visitor's email app
     # The EmailJS public key is meant to be public (it is visible in any site's source).
-    "emailjs_service_id": "",
-    "emailjs_template_id": "",
-    "emailjs_public_key": "",
+    "emailjs_service_id": "service_vmx7zxf",
+    "emailjs_template_id": "template_xamp37e",
+    "emailjs_public_key": "w1z2Of4goQzoSIChl",
     "form_endpoint": "",
 }
 
